@@ -2,7 +2,7 @@
   "name": "locallibraryproject",
   "version": "0.0.0",
   "engines": {
-    "node": "14.8.2"
+    "node": "14.18.2"
   },
   "private": true,
   "scripts": {
