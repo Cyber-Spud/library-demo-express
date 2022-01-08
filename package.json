@@ -1,6 +1,9 @@
 {
   "name": "locallibraryproject",
   "version": "0.0.0",
+  "engines": {
+    "node": "14.8.2"
+  },
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
