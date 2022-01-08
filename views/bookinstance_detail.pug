@@ -1,0 +1,27 @@
+extends layout
+
+block content
+
+  h1 Book Instance: #{bookinstance.book}
+
+  div(style='margin-left:20px;margin-top:20px')
+
+    h4 Books
+
+    if bookinstance.status=='Available'
+      p.text-success #{bookinstance.status}
+    else if bookinstance.status=='Maintenance'
+      p.text-danger #{bookinstance.status}
+    else
+      p.text-warning #{bookinstance.status}
+    p #[strong Imprint:] #{bookinstance.imprint}
+    if bookinstance.status!='Available'
+      p #[strong Due back:] #{bookinstance.due_back_formatted}
+    p #[strong Id:]
+      a(href=bookinstance.url) #{bookinstance._id}
+
+  hr
+  p
+    a(href=bookinstance.url+'/delete') Delete Bookinstance
+  p
+    a(href=bookinstance.url+'/update') Update Bookinstance
